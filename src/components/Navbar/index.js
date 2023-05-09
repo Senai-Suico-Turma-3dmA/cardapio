@@ -9,13 +9,13 @@ function NavBar({ativado}) {
   return (
     <div id="navbar" className={styles.navbar}>
       <a href="#doces" className={styles.menu}>
-        <GiDonut size={20} color={ativado ? "#dce0e6" : "#1f1f20"} /> <span>Doces</span>
+        <GiDonut size={20} color="#dce0e6" /> <span>Doces</span>
       </a>
       <a href="#bebidas" className={styles.menu}>
-        <BsCupStraw size={20} color={ativado ? "#dce0e6" : "#1f1f20"} /> <span>Bebidas</span>
+        <BsCupStraw size={20} color="#dce0e6" /> <span>Bebidas</span>
       </a>
       <a href="#salgados" className={styles.menu}>
-        <FaHamburger size={20} color={ativado ? "#dce0e6" : "#1f1f20"} /> <span>Salgados</span>
+        <FaHamburger size={20} color="#dce0e6" /> <span>Salgados</span>
       </a>
     </div>
   );
