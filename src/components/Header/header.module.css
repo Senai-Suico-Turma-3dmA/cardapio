@@ -3,7 +3,7 @@
     top: 0px;
     background-color: #1f1f20;
     width: 70%;
-    height: 70px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +21,5 @@
 .titulo {
     color: #dce0e6;
     font-size: 20px;
+    margin-top: 10px;
 }

@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./App.module.css";
-
 
 import Header from "./components/Header";
 import NavBar from "./components/Navbar";
+import BotaoMenu from "./components/BotaoMenu";
 
 function App() {
-  return(
+  const [ativado, setAtivado] = useState(false);
+
+  return (
     <div className={styles.container}>
-      <Header />  
-      <NavBar/>
+      <Header />
+      <NavBar ativado={ativado} setAtivado={setAtivado} />
+      <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
       <main className={styles.main}>
         <div id="salgados" className={styles.titulo}>
           <h2>Salgados</h2>
@@ -71,20 +74,18 @@ function App() {
             </div>
             <span className={styles.preco}>R$ 3,00</span>
           </div>
-          
         </div>
 
         <div id="bebidas" className={styles.titulo}>
-          <h2 >Bebidas</h2>
+          <h2>Bebidas</h2>
         </div>
 
-        <div id="doces" className={styles.titulo}> 
+        <div id="doces" className={styles.titulo}>
           <h2>Doces</h2>
         </div>
-        
       </main>
     </div>
-  )
+  );
 }
 
 export default App;

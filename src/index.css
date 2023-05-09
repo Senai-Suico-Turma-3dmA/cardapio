@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Hamburg';
+  src: url('../public/fonts/Hamburg.ttf') format('truetype');
+}
+
+
 * {
   margin: 0px;
   padding: 0px;
