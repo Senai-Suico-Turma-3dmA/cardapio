@@ -39,6 +39,12 @@
     .footer {
         width: 100%;
         justify-content: center;
+        
+    }
+}
+@media (max-width: 500px) {
+    .copy {
+        font-size: 10px;
     }
 }
 
