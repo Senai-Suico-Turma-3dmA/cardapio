@@ -1,0 +1,43 @@
+.footer{
+    width: 70%;
+    height: 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    bottom: 0px;
+    
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#dce0e6;
+    position: fixed;
+    opacity: 0.5;
+}
+
+
+
+.botao {
+    border: 0px;
+    background: transparent;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    
+}
+
+.botao:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        width: 100%;
+        justify-content: center;
+    }
+}
+

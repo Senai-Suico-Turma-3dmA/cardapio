@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./header.module.css";
 import { BsShop } from "react-icons/bs";
-import { FaHamburger } from "react-icons/fa";
-import { BsCupStraw } from "react-icons/bs";
-import { GiDonut } from "react-icons/gi";
+
 
 function Header() {
     return(
