@@ -1,0 +1,68 @@
+.titulo {
+  background-color: #f5cc17;
+  min-height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+.titulo h2 {
+  color: #1f1f20;
+  font-family: 'Hamburg';
+  font-size: 30px;
+  letter-spacing: 4px;
+  border-left: 3px #1f1f20 double;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.produtos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0px;
+}
+
+.item {
+  background-color: #dce0e6;
+  color: #1f1f20;
+  height: 100px;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+.texto {
+  padding-left: 10px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.nome {
+  font-size: 20px;
+  color: black;
+}
+
+.desc {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.preco {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

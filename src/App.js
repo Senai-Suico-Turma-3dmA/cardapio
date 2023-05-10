@@ -1,178 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./App.module.css";
+import MainProvider, { MainContext } from "./context/mainContext";
 
 import Header from "./components/Header";
 import NavBar from "./components/Navbar";
 import BotaoMenu from "./components/BotaoMenu";
 import Footer from "./components/Footer";
+import Section from "./components/Section";
+
 
 function App() {
   const [ativado, setAtivado] = useState(false);
 
-  return (
-    <div className={styles.container}>
-      <Header />
-      <NavBar ativado={ativado} setAtivado={setAtivado} />
-      <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
-      <main className={styles.main}>
-        <div id="salgados" className={styles.titulo}>
-          <h2>Salgados</h2>
-        </div>
-        <div className={styles.produtos}>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-        </div>
+  const ctx = useContext(MainContext);
 
-        <div id="bebidas" className={styles.titulo}>
-          <h2>Bebidas</h2>
-        </div>
-        <div className={styles.produtos}>
-        <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>    <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div><div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-        </div>
-        <div id="doces" className={styles.titulo}>
-          <h2>Doces</h2>
-        </div>
-          <div className={styles.produtos}>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-          <div className={styles.item}>
-            <div className={styles.texto}>
-              <span className={styles.nome}>Pão de queijo</span>
-              <span className={styles.desc}>Tamanho médio</span>
-            </div>
-            <span className={styles.preco}>R$ 3,00</span>
-          </div>
-           </div>
-      </main>
-      <Footer/>
-    </div>
+  console.log(ctx);
+
+  // useEffect(() => {
+  //   pegaDados();
+  // }, []);
+
+  return (
+    <MainProvider>
+      <div className={styles.container}>
+        <Header />
+        <NavBar ativado={ativado} setAtivado={setAtivado} />
+        <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
+        <main className={styles.main}>
+          <Section tipo="sobremesas" />
+        </main>
+        <Footer />
+      </div>
+    </MainProvider>
   );
 }
 
