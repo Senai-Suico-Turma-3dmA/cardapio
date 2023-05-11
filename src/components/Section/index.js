@@ -1,31 +1,38 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./section.module.css";
-import { MainContext } from "../../context/mainContext";
 
-function Section({tipo}) {
-  const { dados } = useContext(MainContext);
+function Section({tipo, data}) {
 
-  const novoDados = dados.map(item => {
-    if (item.categoria === tipo) {
-      return item;
+  const novoData = [];
+
+  data.forEach(element => {
+    if (element.categoria === tipo) {
+      novoData.push(element);
     }
   });
 
-  console.log(novoDados);
+  function capitalizar(texto) {
+    return texto[0].toUpperCase() + texto.substring(1);
+  }
+
 
   return (
     <>
-      <div id="bebidas" className={styles.titulo}>
-        <h2>{tipo}</h2>
+      <div id={tipo} className={styles.titulo}>
+        <h2>{capitalizar(tipo)}</h2>
       </div>
       <div className={styles.produtos}>
-        <div className={styles.item}>
-          <div className={styles.texto}>
-            <span className={styles.nome}>Pão de queijo</span>
-            <span className={styles.desc}>Tamanho médio</span>
-          </div>
-          <span className={styles.preco}>R$ 3,00</span>
-        </div>
+        {novoData.map(item => {
+          return(
+            <div key={item.id} className={styles.item}>
+              <div className={styles.texto}>
+                <span className={styles.nome}>{capitalizar(item.nome)}</span>
+                <span className={styles.desc}>{capitalizar(item.descricao)}.</span>
+              </div>
+              <span className={styles.preco}>R$ {item.preco.toFixed(2).replace('.', ',')}</span>
+            </div>
+          )
+        })}
       </div>
     </>
   );

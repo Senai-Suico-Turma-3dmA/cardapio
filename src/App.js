@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./App.module.css";
-import MainProvider, { MainContext } from "./context/mainContext";
 
 import Header from "./components/Header";
 import NavBar from "./components/Navbar";
@@ -8,30 +7,46 @@ import BotaoMenu from "./components/BotaoMenu";
 import Footer from "./components/Footer";
 import Section from "./components/Section";
 
+import { api } from "./services/api";
 
 function App() {
   const [ativado, setAtivado] = useState(false);
+  
+  const [dados, setDados] = useState([]);
+  const [load, setLoad] = useState(false);
 
-  const ctx = useContext(MainContext);
-
-  console.log(ctx);
-
-  // useEffect(() => {
-  //   pegaDados();
-  // }, []);
+  useEffect(() => {
+    async function pegaDados() {
+      try {
+        let { data } = await api.get('/produtos');
+        setDados(data);
+        setLoad(true);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    pegaDados();
+  }, []);
 
   return (
-    <MainProvider>
-      <div className={styles.container}>
-        <Header />
-        <NavBar ativado={ativado} setAtivado={setAtivado} />
-        <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
-        <main className={styles.main}>
-          <Section tipo="sobremesas" />
-        </main>
-        <Footer />
-      </div>
-    </MainProvider>
+    <div className={styles.container}>
+      <Header />
+      <NavBar tipos={["bebidas", "lanches", "pastéis", "pizzas", "salgados", "sobremesas", "tapiocas salgadas", "tapiocas doces"]} />
+      <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
+      <main className={styles.main}>
+        {load && (<>
+          <Section tipo="bebidas" data={dados} />
+          <Section tipo="lanches" data={dados} />
+          <Section tipo="pastéis" data={dados} />
+          <Section tipo="pizzas" data={dados} />
+          <Section tipo="salgados" data={dados} />
+          <Section tipo="sobremesas" data={dados} />
+          <Section tipo="tapiocas salgadas" data={dados} />
+          <Section tipo="tapiocas doces" data={dados} />
+        </>)}
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -24,18 +24,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 10px;
   transition: 0.5s;
   text-decoration: none;
-}
-
-.menu svg {
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .menu span {
   font-size: 15px;
   color: #dce0e6;
+  text-transform: capitalize;
 }
 
 .menu:hover {
@@ -59,6 +56,8 @@
     .menu {
       margin-left: 20px;
       background: transparent;
+      padding-left: 10px;
+      border-radius: 5px;
     }
     .menu svg {
       margin: 0px 10px;
@@ -66,5 +65,10 @@
     .menu span {
       font-size: 15px;
       color:  #dce0e6;
+    }
+    .menu:hover {
+      height: 40px;
+      background-color: #606d80;
+      transform: scale(1.05);
     }
   }

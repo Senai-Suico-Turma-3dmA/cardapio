@@ -1,22 +1,16 @@
 import React from "react";
 import styles from "./navbar.module.css";
 
-import { GiDonut } from "react-icons/gi";
-import { BsCupStraw } from "react-icons/bs";
-import { FaHamburger } from "react-icons/fa";
-
-function NavBar({ativado}) {
+function NavBar({ tipos }) {
   return (
     <div id="navbar" className={styles.navbar}>
-      <a href="#doces" className={styles.menu}>
-        <GiDonut size={20} color="#dce0e6" /> <span>Doces</span>
-      </a>
-      <a href="#bebidas" className={styles.menu}>
-        <BsCupStraw size={20} color="#dce0e6" /> <span>Bebidas</span>
-      </a>
-      <a href="#salgados" className={styles.menu}>
-        <FaHamburger size={20} color="#dce0e6" /> <span>Salgados</span>
-      </a>
+      {tipos.map(tipo => {
+        return(
+          <a href={"#" + tipo} className={styles.menu}>
+            <span>{tipo}</span>
+          </a>
+        )
+      })}
     </div>
   );
 }
