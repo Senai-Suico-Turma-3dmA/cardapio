@@ -4,7 +4,8 @@ import styles from "./navbar.module.css";
 function NavBar({ tipos,menu,setMenu }) {
   function fechaMenu(){
     const { innerWidth : width } = window;
-    if (width <= "1024px") {
+    console.log(width);
+    if (width <= 1024) {
       document.getElementById("navbar").style.width = "0px"
       setMenu(false)
     }
