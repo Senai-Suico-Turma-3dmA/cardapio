@@ -1,12 +1,18 @@
 import React from "react";
 import styles from "./navbar.module.css";
 
-function NavBar({ tipos }) {
+function NavBar({ tipos,menu,setMenu }) {
+  function fechaMenu(){
+    document.getElementById("navbar").style.width = "0px"
+    setMenu(false)
+  }
+
+
   return (
     <div id="navbar" className={styles.navbar}>
       {tipos.map(tipo => {
         return(
-          <a href={"#" + tipo} className={styles.menu}>
+          <a onClick={fechaMenu} href={"#" + tipo} className={styles.menu}>
             <span>{tipo}</span>
           </a>
         )

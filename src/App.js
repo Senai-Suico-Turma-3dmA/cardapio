@@ -31,7 +31,7 @@ function App() {
   return (
     <div className={styles.container}>
       <Header />
-      <NavBar tipos={["bebidas", "lanches", "pastéis", "pizzas", "salgados", "sobremesas", "tapiocas salgadas", "tapiocas doces"]} />
+      <NavBar menu={ativado} setMenu={setAtivado} tipos={["bebidas", "lanches", "pastéis", "pizzas", "salgados", "sobremesas", "tapiocas salgadas", "tapiocas doces"]} />
       <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
       <main className={styles.main}>
         {load && (<>
