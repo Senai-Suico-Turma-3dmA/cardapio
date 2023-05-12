@@ -7,7 +7,7 @@
     position: fixed;
     top: 35px;
     right: 10px;
-    z-index: 2;
+    z-index: 4;
     border: 0px;
     background: transparent;
   }
