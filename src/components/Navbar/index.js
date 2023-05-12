@@ -3,8 +3,11 @@ import styles from "./navbar.module.css";
 
 function NavBar({ tipos,menu,setMenu }) {
   function fechaMenu(){
-    document.getElementById("navbar").style.width = "0px"
-    setMenu(false)
+    const { innerWidth : width } = window;
+    if (width <= "1024px") {
+      document.getElementById("navbar").style.width = "0px"
+      setMenu(false)
+    }
   }
 
 

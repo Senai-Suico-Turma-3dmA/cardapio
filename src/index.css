@@ -2,6 +2,10 @@
   font-family: 'Hamburg';
   src: url('../public/fonts/Hamburg.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Glossy';
+  src: url('../public/fonts/Glossy\ Sheen\ Regular\ DEMO.ttf') format('truetype');
+}
 
 
 * {
