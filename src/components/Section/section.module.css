@@ -39,6 +39,20 @@
   flex-direction: row;
   border-radius: 5px;
   margin-right: 5px;
+  position: relative;
+}
+
+.itemAberto {
+  background-color: #dce0e6;
+  color: #1f1f20;
+  height: 150px;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  margin-right: 5px;
+  position: relative;
+  transition: 1s;
 }
 
 .texto {
@@ -56,10 +70,18 @@
 }
 
 .desc {
+  width: 100%;
   font-size: 14px;
   opacity: 0.5;
   overflow: hidden;
   white-space: nowrap;
+  transition: 1s;
+}
+
+.descAberto {
+  width: 100%;
+  font-size: 14px;
+  opacity: 0.5;
 }
 
 .preco {
@@ -68,4 +90,14 @@
   justify-content: center;
   align-items: center;
   color: #090f13;
+}
+
+.mais {
+  background: transparent;
+  width: 50px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border: 0px;
+  border-top-right-radius: 5px;
 }
