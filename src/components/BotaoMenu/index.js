@@ -5,7 +5,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseFill } from "react-icons/ri";
 
 function BotaoMenu({ ativado, setAtivado }) {
-  if (ativado) {
+  const { innerWidth : width} = window;
+
+  if (width <= 1024) {
     return (
       <button
         onClick={() => {
