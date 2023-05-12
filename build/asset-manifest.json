@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.7a5b2dde.css",
-    "main.js": "/static/js/main.9b11adfc.js",
+    "main.js": "/static/js/main.e921717e.js",
     "static/media/fundo.png": "/static/media/fundo.9b826c864d8a06922948.png",
     "static/media/Hamburg.ttf": "/static/media/Hamburg.d24da4e7177075a1f4f1.ttf",
     "index.html": "/index.html",
     "main.7a5b2dde.css.map": "/static/css/main.7a5b2dde.css.map",
-    "main.9b11adfc.js.map": "/static/js/main.9b11adfc.js.map"
+    "main.e921717e.js.map": "/static/js/main.e921717e.js.map"
   },
   "entrypoints": [
     "static/css/main.7a5b2dde.css",
-    "static/js/main.9b11adfc.js"
+    "static/js/main.e921717e.js"
   ]
 }

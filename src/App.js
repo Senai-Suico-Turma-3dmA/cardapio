@@ -35,11 +35,11 @@ function App() {
       <BotaoMenu ativado={ativado} setAtivado={setAtivado} />
       <main className={styles.main}>
         {load && (<>
-          <Section tipo="bebidas" data={dados} />
+          <Section tipo="salgados" data={dados} />
           <Section tipo="lanches" data={dados} />
           <Section tipo="pastéis" data={dados} />
           <Section tipo="pizzas" data={dados} />
-          <Section tipo="salgados" data={dados} />
+          <Section tipo="bebidas" data={dados} />
           <Section tipo="sobremesas" data={dados} />
           <Section tipo="tapiocas salgadas" data={dados} />
           <Section tipo="tapiocas doces" data={dados} />
