@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./section.module.css";
 
-import { MdExpandMore } from "react-icons/md";
 
 function Section({tipo, data}) {
 
@@ -27,9 +26,6 @@ function Section({tipo, data}) {
         {novoData.map(item => {
           return(
             <div key={item.id} className={styles.item}>
-              <button className={styles.mais}>
-                <MdExpandMore color="#1f1f20" size={20} />
-              </button>
               <div className={styles.texto}>
                 <span className={styles.nome}>{capitalizar(item.nome)}</span>
                 <span className={styles.desc}>{capitalizar(item.descricao)}.</span>
